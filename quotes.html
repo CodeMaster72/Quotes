@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Printing Quotes</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <h1 id="quote"></h1>
+        <h1 id="author"></h1>
+        <h1 id="full"></h1>
+        <input id="uquote" placeholder="Quote">
+        <br>
+        <input id="uauthor" placeholder="Author">
+        <br>
+        <button id="clicky">Results</button>
+        
+
+    
+    <script>
+        $("#clicky").click(function(){
+            var words = $("#uquote").val();
+            var talker = $("#uauthor").val();
+            $("#uquote").hide();
+            $("#uauthor").hide();
+            $("#clicky").hide();
+            $("#quote").html("What is the quote? " + words);
+            $("#author").html("Who said it? " + words);
+            $("#full").html(talker +  ' says "' +  words + '".');
+
+
+            
+        });
+    </script>
+
+    </body>   
+</html>
